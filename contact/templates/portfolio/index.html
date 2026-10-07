@@ -1,0 +1,714 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <metaname="viewport"content="width=device-width, initial-scale=1.0">
+    <meta name="description"content="Tiamyu Taofeek - Full Stack Developer Portfolio">
+    <title>Tiamyu Taofeek | Full Stack Developer</title>
+    <link rel="stylesheet"href="{% static 'css/style.css' %}">
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <a href="#home" class="logo">
+        <span>Tiamyu</span>
+    </a>
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a
+            href="https://github.com/taofeekt44-prog"
+            target="_blank"
+            class="github-link"
+        >
+            GitHub
+        </a>
+        
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+    <div class="hero-content reveal">
+        <div class="status">
+            <span class="status-dot"></span>
+            Available for opportunities
+        </div>
+        <p class="small-text">HELLO, I'M</p>
+        <h1>Tiamyu Taofeek</h1>
+        <h2>I'm a<span id="typingText"></span></h2>
+        <p class="hero-description">
+            I build modern, responsive and functional
+            web applications that solve real-world problems.
+        </p>
+
+        <div class="hero-buttons">
+            <a
+                href="#projects"
+                class="btn primary"
+            >
+                View My Work
+            </a>
+
+
+            <a
+                href="#contact"
+                class="btn secondary"
+            >
+                Let's Talk
+            </a>
+
+        </div>
+
+
+        <div class="social-links">
+
+            <a
+                href="https://github.com/taofeekt44-prog"
+                target="_blank"
+            >
+                GitHub ↗
+            </a>
+
+            <a
+                href="https://linkedin.com/in/YOUR_USERNAME"
+                target="_blank"
+            >
+                LinkedIn ↗
+            </a>
+
+            <a
+                href="{% static 'files/Tiamyu_Taofeek_CV.pdf' %}"
+                download
+            >
+                Download CV ↓
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-decoration">
+
+        <div class="code-window">
+
+            <div class="window-header">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <pre><code>
+const developer = {
+    name: "Tiamyu",
+    role: "Full Stack Developer",
+    stack: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "Django"
+    ],
+    passion: "Building useful things"
+};
+
+developer.create();
+            </code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <p class="section-label">
+               ABOUT ME
+            </p>
+
+            <h2>
+                Turning ideas into
+                <span>digital experiences.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-text reveal">
+
+                <p>
+                    I'm a Full Stack Developer focused on
+                    creating modern and functional web
+                    applications.
+                </p>
+
+                <p>
+                    I enjoy working on both the frontend
+                    and backend of applications, from
+                    designing user interfaces to building
+                    databases and APIs.
+                </p>
+
+                <p>
+                    My goal is to keep learning, solve
+                    real-world problems and build software
+                    that people can actually use.
+                </p>
+
+            </div>
+
+
+            <div class="about-card reveal">
+
+                <h3>
+                    Developer mindset
+                </h3>
+
+                <p>
+                    Learn → Build → Test → Improve
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="section dark-section" id="skills">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <p class="section-label">
+             SKILLS
+            </p>
+
+            <h2>
+                My technical toolkit.
+            </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill reveal">
+                <h3>HTML & CSS</h3>
+                <p>
+                    Responsive layouts, modern UI and
+                    accessible web structures.
+                </p>
+            </div>
+
+
+            <div class="skill reveal">
+                <h3>JavaScript</h3>
+                <p>
+                    Interactive interfaces and
+                    client-side functionality.
+                </p>
+            </div>
+
+
+            <div class="skill reveal">
+                <h3>Python</h3>
+                <p>
+                    Backend programming and
+                    application development.
+                </p>
+            </div>
+
+
+            <div class="skill reveal">
+                <h3>Django</h3>
+                <p>
+                    Full-stack web applications,
+                    authentication and APIs.
+                </p>
+            </div>
+
+
+            <div class="skill reveal">
+                <h3>Databases</h3>
+                <p>
+                    Working with application data,
+                    models and relationships.
+                </p>
+            </div>
+
+
+            <div class="skill reveal">
+                <h3>Git & GitHub</h3>
+                <p>
+                    Version control and collaborative
+                    software development.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="section" id="projects">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <p class="section-label">
+            </p>
+
+            <h2>
+                Things I've built.
+            </h2>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+
+                    <span class="project-type">
+                        Django
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    FareCheck Nigeria
+                </h3>
+
+
+                <p>
+                    A crowd-sourced transport fare
+                    tracker that helps commuters
+                    check current fares across
+                    Nigerian routes.
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>JavaScript</span>
+                    <span>SQLite</span>
+
+                </div>
+
+
+                <div class="project-buttons">
+
+                    <a
+                        href="https://github.com/taofeekt44-prog/Fare-Check"
+                        target="_blank"
+                        class="project-btn"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://fare-check.onrender.com/"
+                        target="_blank"
+                        class="project-btn primary-project"
+                    >
+                        Live Demo ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+                    <span class="project-type">
+                        Full Stack
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    LitreVault
+                </h3>
+
+
+                <p>
+                    A fuel litre wallet application
+                    designed to help users manage
+                    fuel purchases, litre balances
+                    and redemptions.
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>Django</span>
+                    <span>React</span>
+                    <span>Python</span>
+
+                </div>
+
+
+                <div class="project-buttons">
+
+                    <a
+                        href="https://github.com/taofeekt44-prog/react-fuel-vault"
+                        target="_blank"
+                        class="project-btn"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://fuelvault-tiyo.onrender.com/"
+                        target="_blank"
+                        class="project-btn primary-project"
+                    >
+                        Live Demo ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card reveal">
+                <div class="project-top">
+                    <span class="project-type">
+                        Portfolio
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Developer Portfolio
+                </h3>
+
+
+                <p>
+                    A responsive personal portfolio
+                    built to showcase my development
+                    skills, projects and experience.
+                </p>
+
+
+                <div class="project-tech">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Django</span>
+
+                </div>
+
+
+                <div class="project-buttons">
+
+                    <a
+                        href="YOUR_PORTFOLIO_GITHUB_LINK"
+                        target="_blank"
+                        class="project-btn"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="project-btn primary-project"
+                    >
+                        Hire Me ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section dark-section" id="contact">
+
+    <div class="container">
+
+        <div class="contact-wrapper">
+
+
+            <div class="contact-info reveal">
+
+                <h2>
+                    Have a project
+                    in mind?
+                </h2>
+
+                <p>
+                    Whether you have a project idea,
+                    job opportunity or simply want
+                    to connect, send me a message.
+                </p>
+
+
+                <div class="contact-links">
+
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=taofeekt44@gmail.com" target="_blank">
+                        Email Me
+                    </a>
+
+                    <a
+                        href="https://github.com/taofeekt44-prog"
+                        target="_blank"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/tiamiyu-taofeek-967452441/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BumOil5M7TvCGZ6i4Mn9NGQ%3D%3D"
+                        target="_blank"
+                    >
+                        LinkedIn ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form
+                method="POST"
+                class="contact-form reveal"
+                id="contactForm"
+            >
+
+                {% csrf_token %}
+
+
+                <div class="input-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="John Doe"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="john@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Let's work together"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Tell me about your project..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn primary submit-btn"
+                    id="submitButton"
+                >
+
+                    <span id="buttonText">
+                        Send Message
+                    </span>
+
+                    <span
+                        class="spinner"
+                        id="spinner"
+                    ></span>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SUCCESS MESSAGE ================= -->
+
+{% if success %}
+
+<div class="success-message" id="successMessage">
+
+    <div class="success-icon">
+        ✓
+    </div>
+
+    <div>
+
+        <strong>
+            Message sent successfully!
+        </strong>
+
+        <p>
+            Thanks for reaching out. I'll get back
+            to you as soon as possible.
+        </p>
+
+    </div>
+
+    <button id="closeSuccess">
+        ×
+    </button>
+
+</div>
+
+{% endif %}
+
+
+
+<!-- ================= SCROLL TOP ================= -->
+
+<button
+    id="scrollTop"
+    class="scroll-top"
+>
+    ↑
+</button>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="logo">
+            <span>Tiamyu</span>
+        </div>
+
+        <p>
+            Built with Django, HTML, CSS & JavaScript.
+        </p>
+
+        <p>
+            © 2026 Tiamyu Taofeek.
+        </p>
+
+    </div>
+</footer>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
