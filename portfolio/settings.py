@@ -33,11 +33,11 @@ ALLOWED_HOSTS = config(
     default="localhost,127.0.0.1"
 ).split(",")
 
-CSRF_TRUSTED_ORIGINS = config(
-    "CSRF_TRUSTED_ORIGINS",
-    default=""
-).split(",")
-
+CSRF_TRUSTED_ORIGINS = [
+    origin.strip()
+    for origin in config("CSRF_TRUSTED_ORIGINS", default="").split(",")
+    if origin.strip()
+]
 # Application definition
 
 INSTALLED_APPS = [
