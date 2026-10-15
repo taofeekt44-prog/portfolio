@@ -34,12 +34,12 @@ def home(request):
                     from_email=settings.DEFAULT_FROM_EMAIL,
                     recipient_list=[settings.CONTACT_EMAIL],
                     fail_silently=False,
+                    timeout=5,
                 )
             except Exception:
                 logger.exception("Failed to send portfolio contact email")
 
             return redirect("/?success=1")
-
     success = request.GET.get("success")
     return render(
         request,
