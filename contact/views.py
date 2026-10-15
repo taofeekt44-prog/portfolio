@@ -1,6 +1,6 @@
 import logging
+import resend
 from django.shortcuts import render, redirect
-from django.core.mail import send_mail
 from django.conf import settings
 from .models import ContactMessage
 
@@ -13,8 +13,6 @@ def home(request):
         message = request.POST.get("message", "").strip()
 
         if name and email and subject and message:
-
-            # Save the message first
             ContactMessage.objects.create(
                 name=name,
                 email=email,
@@ -22,24 +20,31 @@ def home(request):
                 message=message
             )
 
-            # Try to send the email
             try:
-                send_mail(
-                    subject=f"Portfolio Contact: {subject}",
-                    message=(
+                if not settings.RESEND_API_KEY:
+                    raise ValueError("RESEND_API_KEY is not configured")
+
+                resend.api_key = settings.RESEND_API_KEY
+
+                resend.Emails.send({
+                    "from": settings.RESEND_FROM_EMAIL,
+                    "to": [settings.CONTACT_EMAIL],
+                    "reply_to": email,
+                    "subject": f"Portfolio Contact: {subject}",
+                    "text": (
                         f"Name: {name}\n"
                         f"Email: {email}\n\n"
                         f"Message:\n{message}"
                     ),
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[settings.CONTACT_EMAIL],
-                    fail_silently=False,
-                    timeout=5,
-                )
+                })
+
             except Exception:
-                logger.exception("Failed to send portfolio contact email")
+                logger.exception(
+                    "Failed to send portfolio contact email"
+                )
 
             return redirect("/?success=1")
+
     success = request.GET.get("success")
     return render(
         request,
